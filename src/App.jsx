@@ -7,7 +7,9 @@ function App() {
     <>
       <Navbar></Navbar>
       <Banner></Banner>
-      <About></About>
+      <div className="p-5 lg:max-w-4xl xl:max-w-5xl mx-auto space-y-10">
+        <About></About>
+      </div>
     </>
   );
 }

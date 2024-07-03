@@ -1,20 +1,35 @@
+import { LuDownload } from "react-icons/lu";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const navLinks = (
     <>
-      <li>
-        <a>Item 1</a>
+      {/* <li>
+        <NavLink>Item 1</NavLink>
       </li>
       <li>
-        <a>Item 1</a>
+        <NavLink>Item 2</NavLink>
       </li>
       <li>
-        <a>Item 1</a>
+        <NavLink>Item 3</NavLink>
+      </li> */}
+      <li>
+        <Link>Home</Link>
+      </li>
+      <li>
+        <Link>About</Link>
+      </li>
+      <li>
+        <Link>Projects</Link>
+      </li>
+      <li>
+        <Link>Contact</Link>
       </li>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-black shadow-sm fixed bg-opacity-30 text-white">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,13 +55,15 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl">Mohsin_AA</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <button className="btn">
+          <LuDownload /> Resume
+        </button>
       </div>
     </div>
   );

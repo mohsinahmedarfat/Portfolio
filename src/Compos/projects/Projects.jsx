@@ -1,53 +1,82 @@
-import { Link } from "react-router-dom";
+import eduelevate from "../../assets/EduElevate.png";
 import volunify from "../../assets/Volunify.png";
-import { FiGithub } from "react-icons/fi";
-import { LuArrowUpRightSquare } from "react-icons/lu";
+import wanderlust from "../../assets/Wanderlust.png";
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
+  const eduFeat = (
+    <>
+      <li>A student can be a teacher and can launch their courses.</li>
+      <li>Students can pay for their course.</li>
+      <li>Teachers can launch their courses and later can manage them.</li>
+    </>
+  );
+  const volFeat = (
+    <>
+      <li>User can add volunteer posts.</li>
+      <li>User can manage their volunteer posts.</li>
+      <li>User can update or delete their volunteer posts.</li>
+    </>
+  );
+  const wanderFeat = (
+    <>
+      <li>User can add tourist spots.</li>
+      <li>User can manage their tourist spots.</li>
+      <li>User can update or delete their tourist spots.</li>
+    </>
+  );
+
   return (
     <div>
       <h1 className="text-3xl font-bold mb-5">Projects</h1>
-      <div className="card lg:card-side bg-base-100 shadow-xl">
-        <figure className="w-1/2">
-          <img className="rounded-e-2xl" src={volunify} alt="Album" />
-        </figure>
-        <div className="card-body w-1/2">
-          <h2 className="card-title font-bold text-2xl">Volunify</h2>
-          <p>
-            Voluntify is a platform that connects volunteers with organizations
-            or individuals in need of volunteer assistance. It facilitates both
-            volunteering opportunities and volunteer recruitment.
-          </p>
-          <div className="w-fit">
-            <p className="mb-3 font-medium">Technologies used:</p>
-            <div className="flex flex-wrap gap-3">
-              <div className=" px-3 rounded-xl bg-[#DEFCF9]">JavaScript</div>
-              <div className=" px-3 rounded-xl bg-[#DEFCF9]">Tailwind CSS</div>
-              <div className=" px-3 rounded-xl bg-[#DEFCF9]">React</div> <br />
-              <div className=" px-3 rounded-xl bg-[#DEFCF9]">Firebase</div>
-              <div className=" px-3 rounded-xl bg-[#DEFCF9]">Node.js</div>
-              <div className=" px-3 rounded-xl bg-[#DEFCF9]">Express.js</div>
-              <div className=" px-3 rounded-xl bg-[#DEFCF9]">JWT</div>
-              <div className=" px-3 rounded-xl bg-[#DEFCF9]">MongoDB</div>
-            </div>
-          </div>
-          <div className="card-actions justify-end mt-5">
-            <Link
-              target="_blank"
-              to="https://github.com/mohsinahmedarfat/Volunify-client-side?tab=readme-ov-file"
-              className="text-2xl"
-            >
-              <FiGithub />
-            </Link>
-            <Link
-              target="_blank"
-              to="https://volunify-2c546.web.app"
-              className="text-2xl"
-            >
-              <LuArrowUpRightSquare />
-            </Link>
-          </div>
-        </div>
+      <div className="space-y-5">
+        <ProjectCard
+          image={eduelevate}
+          name={"EduElevate"}
+          description={
+            "EduElevate is a platform that connects students with instructors directly. Students can browse and purchase courses from their preferred teachers, while instructors can create and launch their own courses."
+          }
+          features={eduFeat}
+          githubClient={
+            "https://github.com/mohsinahmedarfat/EduElevate-client-side?tab=readme-ov-file"
+          }
+          githubServer={
+            "https://github.com/mohsinahmedarfat/EduElevate-server-side"
+          }
+          live={"https://eduelevate.web.app"}
+        ></ProjectCard>
+
+        <ProjectCard
+          image={volunify}
+          name={"Volunify"}
+          description={
+            "Voluntify is a platform that connects volunteers with organizations or individuals in need of volunteer assistance. It facilitates both volunteering opportunities and volunteer recruitment."
+          }
+          features={volFeat}
+          githubClient={
+            "https://github.com/mohsinahmedarfat/Volunify-client-side?tab=readme-ov-file"
+          }
+          githubServer={
+            "https://github.com/mohsinahmedarfat/Volunify-server-side"
+          }
+          live={"https://volunify-2c546.web.app"}
+        ></ProjectCard>
+
+        <ProjectCard
+          image={wanderlust}
+          name={"Wanderlust"}
+          description={
+            "Wanderlust is a travel planning tool that helps users create and manage their dream travel itineraries."
+          }
+          features={wanderFeat}
+          githubClient={
+            "https://github.com/mohsinahmedarfat/Wanderlust-client-side?tab=readme-ov-file"
+          }
+          githubServer={
+            "https://github.com/mohsinahmedarfat/Wanderlust-server-side"
+          }
+          live={"https://wanderlust-3daf6.web.app"}
+        ></ProjectCard>
       </div>
     </div>
   );

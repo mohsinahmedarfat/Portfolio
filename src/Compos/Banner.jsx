@@ -7,7 +7,8 @@ const Banner = () => {
           <h1 className="my-4 text-5xl font-bold">Mohsin Ahmed Arfat</h1>
           <p className="text-xl">
             A passionate Web Developer specializing in creating dynamic and
-            beautiful Web Applications.
+            beautiful Web Applications. Love the practice of coding and
+            committed to developing strong programming skills
           </p>
           <button className="btn btn-outline text-white mt-5 uppercase">
             Projects

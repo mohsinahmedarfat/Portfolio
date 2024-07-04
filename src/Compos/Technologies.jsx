@@ -11,7 +11,7 @@ const Technologies = () => {
     "MongoDB",
   ];
   return (
-    <section className="p-10 bg-white">
+    <section>
       <h2 className="text-3xl font-bold">Technologies I&apos;ve used</h2>
       <div className="mt-8 space-x-4 text-center">
         {skills.map((skill, index) => (

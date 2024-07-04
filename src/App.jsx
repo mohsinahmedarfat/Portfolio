@@ -12,7 +12,7 @@ function App() {
     <>
       <Navbar></Navbar>
       <Banner></Banner>
-      <div className="p-5 lg:max-w-4xl xl:max-w-5xl mx-auto space-y-10">
+      <div className="p-5 lg:max-w-4xl xl:max-w-5xl mx-auto space-y-20">
         <About></About>
         <Projects></Projects>
         <Technologies></Technologies>

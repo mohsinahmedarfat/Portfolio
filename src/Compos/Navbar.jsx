@@ -28,6 +28,16 @@ const Navbar = () => {
     </>
   );
 
+  const handleDownload = () => {
+    const url = "../assets/Resume.pdf";
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = "Resume.pdf";
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  };
+
   return (
     <div className="navbar bg-[#CADEFC] backdrop-blur-md fixed bg-opacity-70 text-white z-10">
       <div className="navbar-start">
@@ -65,7 +75,10 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end mr-3">
-        <button className="btn btn-sm bg-gradient-to-r from-[#CCA8E9] to-[#CADEFC] border-none">
+        <button
+          onClick={handleDownload}
+          className="btn btn-sm bg-gradient-to-r from-[#CCA8E9] to-[#CADEFC] border-none"
+        >
           <LuDownload /> Resume
         </button>
       </div>

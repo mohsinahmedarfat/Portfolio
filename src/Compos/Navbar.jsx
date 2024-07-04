@@ -55,7 +55,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl font-bold text-[#769FCD]">
+        <a className="ml-5 text-xl font-bold text-[#5C5470]">
           Mohsin Ahmed Arfat
         </a>
       </div>
@@ -64,7 +64,7 @@ const Navbar = () => {
           {navLinks}
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end mr-3">
         <button className="btn btn-sm bg-gradient-to-r from-[#CCA8E9] to-[#CADEFC] border-none">
           <LuDownload /> Resume
         </button>

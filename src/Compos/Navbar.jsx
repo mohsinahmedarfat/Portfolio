@@ -29,7 +29,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-black backdrop-blur-md fixed bg-opacity-30 text-white z-10">
+    <div className="navbar bg-[#CADEFC] backdrop-blur-md fixed bg-opacity-70 text-white z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -55,13 +55,17 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Mohsin_AA</a>
+        <a className="btn btn-ghost text-xl font-bold text-[#769FCD]">
+          Mohsin Ahmed Arfat
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <ul className="menu menu-horizontal px-1 font-medium text-[#B9B4C7] ">
+          {navLinks}
+        </ul>
       </div>
       <div className="navbar-end">
-        <button className="btn">
+        <button className="btn btn-sm bg-gradient-to-r from-[#CCA8E9] to-[#CADEFC] border-none">
           <LuDownload /> Resume
         </button>
       </div>

@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Education = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const showModal = () => {
-    setIsOpen(!isOpen);
-  };
+  // const showModal = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   return (
     <div>
@@ -41,11 +41,16 @@ const Education = () => {
           </h1>
 
           <h1>
-            <strong>Certificate:</strong>
+            <strong>Certificate:</strong>{" "}
+            <Link
+              className="underline"
+              to="https://drive.google.com/file/d/1awTSUFmnNOl-OIFd3cOpE6CI7yJ8e3Tl/view?usp=sharing"
+            >
+              View
+            </Link>
           </h1>
 
-          {/* Open the modal using document.getElementById('ID').showModal() method */}
-          <button className="btn" onClick={() => showModal()}>
+          {/* <button className="btn" onClick={() => showModal()}>
             open modal
           </button>
           {isOpen && (
@@ -58,7 +63,7 @@ const Education = () => {
                 <button>close</button>
               </form>
             </dialog>
-          )}
+          )} */}
         </div>
       </div>
     </div>

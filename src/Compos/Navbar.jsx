@@ -1,5 +1,6 @@
 import { LuDownload } from "react-icons/lu";
 import { Link } from "react-router-dom";
+import resume from "../assets/Mohsin Ahmed Arfat - Resume.pdf";
 
 const Navbar = () => {
   const navLinks = (
@@ -27,16 +28,6 @@ const Navbar = () => {
       </li>
     </>
   );
-
-  const handleDownload = () => {
-    const url = "../assets/Resume.pdf";
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = "Resume.pdf";
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
-  };
 
   return (
     <div className="navbar bg-[#CADEFC] backdrop-blur-md fixed bg-opacity-70 text-white z-10">
@@ -75,12 +66,11 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end mr-3">
-        <button
-          onClick={handleDownload}
-          className="btn btn-sm bg-gradient-to-r from-[#CCA8E9] to-[#CADEFC] border-none"
-        >
-          <LuDownload /> Resume
-        </button>
+        <a href={resume} download={"Resume-Mohsin-Ahmed-Arfat"}>
+          <button className="btn btn-sm bg-gradient-to-r from-[#CCA8E9] to-[#CADEFC] border-none">
+            <LuDownload /> Resume
+          </button>
+        </a>
       </div>
     </div>
   );

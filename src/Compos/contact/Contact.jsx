@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const {
@@ -11,7 +12,25 @@ const Contact = () => {
 
   const onSubmit = async (data) => {
     console.log(data);
-    toast.success("Your message sent successfully.");
+
+    emailjs
+      .send(
+        "service_mohsinarfat", // Replace with your service ID
+        "template_mohsinarfat", // Replace with your template ID
+        data,
+        "K4nqCJCThwJY7I6SG" // Replace with your user ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Message Sent Successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error("Failed to send message, please try again later.");
+        }
+      );
+
     reset();
   };
 

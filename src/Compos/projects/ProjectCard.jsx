@@ -38,13 +38,23 @@ const ProjectCard = ({
           </div>
         </div>
         <div className="card-actions justify-end">
-          <Link target="_blank" to={githubServer} className="text-2xl">
-            <FaGithub />
-          </Link>
-          <Link target="_blank" to={githubClient} className="text-2xl">
+          <Link
+            target="_blank"
+            to={githubClient}
+            className="text-2xl"
+            title="Client"
+          >
             <FiGithub />
           </Link>
-          <Link target="_blank" to={live} className="text-2xl">
+          <Link
+            target="_blank"
+            to={githubServer}
+            className="text-2xl"
+            title="Server"
+          >
+            <FaGithub />
+          </Link>
+          <Link target="_blank" to={live} className="text-2xl" title="Live">
             <LuArrowUpRightSquare />
           </Link>
         </div>

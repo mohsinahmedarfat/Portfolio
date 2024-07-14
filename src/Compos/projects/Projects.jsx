@@ -27,7 +27,7 @@ const Projects = () => {
   );
 
   return (
-    <div>
+    <section>
       <h1 className="text-3xl font-bold mb-5">Projects</h1>
       <div className="space-y-5">
         <ProjectCard
@@ -78,7 +78,7 @@ const Projects = () => {
           live={"https://wanderlust-3daf6.web.app"}
         ></ProjectCard>
       </div>
-    </div>
+    </section>
   );
 };
 

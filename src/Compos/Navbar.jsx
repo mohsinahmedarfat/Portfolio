@@ -1,6 +1,6 @@
 import { LuDownload } from "react-icons/lu";
-import { Link } from "react-router-dom";
 import resume from "../assets/Mohsin Ahmed Arfat - Resume.pdf";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const navLinks = (
@@ -15,16 +15,24 @@ const Navbar = () => {
         <NavLink>Item 3</NavLink>
       </li> */}
       <li>
-        <Link>Home</Link>
+        <Link to="home" smooth={true} duration={500}>
+          Home
+        </Link>
       </li>
       <li>
-        <Link>About</Link>
+        <Link to="about" smooth={true} duration={500}>
+          About
+        </Link>
       </li>
       <li>
-        <Link>Projects</Link>
+        <Link to="projects" smooth={true} duration={500}>
+          Projects
+        </Link>
       </li>
       <li>
-        <Link>Contact</Link>
+        <Link to="contact" smooth={true} duration={500}>
+          Contact
+        </Link>
       </li>
     </>
   );

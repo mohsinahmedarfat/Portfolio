@@ -6,18 +6,31 @@ import Technologies from "./Compos/Technologies";
 import Education from "./Compos/Education";
 import Projects from "./Compos/projects/Projects";
 import Contact from "./Compos/contact/Contact";
+import { Element } from "react-scroll";
 
 function App() {
   return (
     <>
       <Navbar></Navbar>
-      <Banner></Banner>
+      <Element name="home" className="element">
+        <Banner></Banner>
+      </Element>
+
       <div className="p-5 lg:max-w-4xl xl:max-w-5xl mx-auto space-y-20">
-        <About></About>
-        <Projects></Projects>
+        <Element name="about" className="element">
+          <About></About>
+        </Element>
+
+        <Element name="projects" className="element">
+          <Projects></Projects>
+        </Element>
+
         <Technologies></Technologies>
         <Education></Education>
-        <Contact></Contact>
+
+        <Element name="contact" className="element">
+          <Contact></Contact>
+        </Element>
       </div>
       <Footer></Footer>
     </>

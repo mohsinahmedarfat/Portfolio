@@ -2,7 +2,7 @@ import img from "../assets/Mohsin Ahmed Arfat.jpg";
 
 const About = () => {
   return (
-    <div>
+    <section>
       <h1 className="text-3xl font-bold mb-5">About me</h1>
       <div className="flex flex-col-reverse lg:flex-row gap-5 lg:gap-20">
         <div>
@@ -40,7 +40,7 @@ const About = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
